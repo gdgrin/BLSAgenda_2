@@ -10,6 +10,10 @@ import UIKit
 
 class AssignmentCell: UITableViewCell {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var dueDateLabel: UILabel!
+    @IBOutlet weak var noteLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

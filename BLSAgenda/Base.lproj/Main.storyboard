@@ -1,13 +1,64 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YtF-Or-1k7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZWe-LI-nQH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Classes View Controller-->
+        <!--Home-->
+        <scene sceneID="dxG-FT-7KH">
+            <objects>
+                <viewController title="Home" id="Pe4-pC-f8n" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vxb-TX-fmb"/>
+                        <viewControllerLayoutGuide type="bottom" id="dsI-ta-7qj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t6e-0h-s3g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BLS Agenda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFg-cF-0RQ">
+                                <rect key="frame" x="-1" y="64" width="376" height="65"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="jdP-Ro-vNU">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="7Zq-Bp-gKT"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="290-mV-uqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="664.5" y="-1474.5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Scg-9b-6tp">
+            <objects>
+                <tabBarController id="ZWe-LI-nQH" sceneMemberID="viewController">
+                    <keyCommands/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="You-h5-PLl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="350-h1-PgU" kind="relationship" relationship="viewControllers" id="L91-tm-8x2"/>
+                        <segue destination="YtF-Or-1k7" kind="relationship" relationship="viewControllers" id="XIS-DQ-cwH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u8y-Qn-y0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-505.5" y="-1033.5"/>
+        </scene>
+        <!--My Classes-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ClassesViewController" customModule="BLSAgenda" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ClassesViewController" id="vXZ-lx-hvc" customClass="ClassesViewController" customModule="BLSAgenda" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -17,90 +68,108 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7r-PK-8aQ">
-                                <rect key="frame" x="62" y="145" width="46" height="30"/>
+                                <rect key="frame" x="59" y="186" width="53" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Subj 1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2zZ-je-OnB" kind="show" identifier="AssignmentSegue" id="gDn-Er-GdQ"/>
+                                    <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue1" id="Lk9-MN-gNi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsJ-1L-EdZ">
-                                <rect key="frame" x="153" y="145" width="46" height="30"/>
+                                <rect key="frame" x="161" y="186" width="53" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Subj 2">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2zZ-je-OnB" kind="show" identifier="AssignmentSegue" id="TyA-kE-0ZP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IO-3H-AoS">
-                                <rect key="frame" x="62" y="318" width="44" height="30"/>
-                                <state key="normal" title="Subj 7">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="2zZ-je-OnB" kind="show" identifier="AssignmentSegue" id="MA2-R8-f1b"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvz-ee-0QK">
-                                <rect key="frame" x="153" y="318" width="44" height="30"/>
-                                <state key="normal" title="Subj 8">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="2zZ-je-OnB" kind="show" identifier="AssignmentSegue" id="UUu-tp-qKG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIK-rR-yMD">
-                                <rect key="frame" x="254" y="318" width="44" height="30"/>
-                                <state key="normal" title="Subj 9">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="2zZ-je-OnB" kind="show" identifier="AssignmentSegue9" id="lkf-hE-XH5"/>
+                                    <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue2" id="6Wq-Xg-oq0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDU-uU-M1x">
-                                <rect key="frame" x="254" y="145" width="46" height="30"/>
+                                <rect key="frame" x="263" y="186" width="53" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Subj 3">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2zZ-je-OnB" kind="show" identifier="AssignmentSegue" id="VHp-ot-Qab"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAH-9a-KN6">
-                                <rect key="frame" x="254" y="228" width="46" height="30"/>
-                                <state key="normal" title="Subj 6">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="2zZ-je-OnB" kind="show" identifier="AssignmentSegue" id="agd-kI-XDf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfr-YN-xvB">
-                                <rect key="frame" x="153" y="228" width="46" height="30"/>
-                                <state key="normal" title="Subj 5">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="2zZ-je-OnB" kind="show" identifier="AssignmentSegue" id="FX0-W3-BDe"/>
+                                    <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue3" id="eJS-IK-pIL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpO-IM-AY0">
-                                <rect key="frame" x="62" y="228" width="46" height="30"/>
+                                <rect key="frame" x="59" y="268" width="53" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Subj 4">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2zZ-je-OnB" kind="show" identifier="AssignmentSegue" id="LX3-1K-sk9"/>
+                                    <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue4" id="7zX-Ce-OEL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfr-YN-xvB">
+                                <rect key="frame" x="161" y="268" width="53" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Subj 5">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue5" id="jaH-ol-ybD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IO-3H-AoS">
+                                <rect key="frame" x="59" y="346" width="53" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Subj 7">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue7" id="UN5-HG-q4R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvz-ee-0QK">
+                                <rect key="frame" x="161" y="346" width="53" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Subj 8">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue8" id="AAj-Ux-wL9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIK-rR-yMD">
+                                <rect key="frame" x="263" y="346" width="53" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Subj 9">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue9" id="HyH-Ou-cEx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BLS Agenda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywr-hY-704">
+                                <rect key="frame" x="0.0" y="64" width="376" height="65"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAH-9a-KN6">
+                                <rect key="frame" x="263" y="268" width="53" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Subj 6">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue6" id="FoB-qh-o7q"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="CoQ-La-NpM"/>
+                    <navigationItem key="navigationItem" title="My Classes" id="CoQ-La-NpM">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="78q-TB-lm1"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="sb1" destination="d7r-PK-8aQ" id="Vqr-mY-pBh"/>
@@ -118,16 +187,16 @@
             </objects>
             <point key="canvasLocation" x="664.5" y="-591.5"/>
         </scene>
-        <!--Assignment Table View Controller-->
+        <!--Assignment Table-->
         <scene sceneID="BAr-Ez-K1l">
             <objects>
-                <tableViewController id="YBu-4c-Mar" customClass="AssignmentTableViewController" customModule="BLSAgenda" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AssignmentTableViewController" title="Assignment Table" id="YBu-4c-Mar" customClass="AssignmentTableViewController" customModule="BLSAgenda" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="uK5-Gg-yTj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" textLabel="vcI-Mn-wCD" detailTextLabel="QWs-XZ-IUe" style="IBUITableViewCellStyleSubtitle" id="hMW-Jg-SQl" customClass="AssignmentCell" customModule="BLSAgenda" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="AssignmentCell" textLabel="vcI-Mn-wCD" detailTextLabel="QWs-XZ-IUe" style="IBUITableViewCellStyleSubtitle" id="hMW-Jg-SQl" customClass="AssignmentCell" customModule="BLSAgenda" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hMW-Jg-SQl" id="JYl-5z-m1j">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -146,6 +215,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dueDateLabel" destination="QWs-XZ-IUe" id="Zw9-xT-vGj"/>
+                                    <outlet property="nameLabel" destination="vcI-Mn-wCD" id="DeA-e6-ber"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -154,19 +227,28 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="aS8-ca-qIf">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="AYG-LK-JBf">
+                    <navigationItem key="navigationItem" title="Assignments" id="HNL-Tq-JT9">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="hPb-68-lyp">
                             <connections>
-                                <segue destination="ZSG-Mk-P6V" kind="presentation" id="zNA-Fr-0MU"/>
+                                <action selector="unwindSegue:" destination="YBu-4c-Mar" id="MNy-sE-lp4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7h9-Ar-SA0">
+                            <connections>
+                                <segue destination="ZSG-Mk-P6V" kind="presentation" id="BuO-s6-hb0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="243-06-Hr5" kind="unwind" identifier="unwindFromAssignmentTableSegue" unwindAction="unwindFromAssignmentTable:" id="tHk-vf-kqP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="36C-t4-x4n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="243-06-Hr5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1607.5" y="-591.5"/>
+            <point key="canvasLocation" x="1230.5" y="-591.5"/>
         </scene>
         <!--Add Assignment-->
         <scene sceneID="bTD-oa-8o9">
@@ -201,7 +283,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5kk-Xz-hSU" id="hcc-wL-lcM">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gA4-fV-Siu">
+                                                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gA4-fV-Siu">
                                                     <rect key="frame" x="0.0" y="-1" width="375" height="162"/>
                                                     <date key="date" timeIntervalSinceReferenceDate="448815364.53355402">
                                                         <!--2015-03-23 14:56:04 +0000-->
@@ -219,8 +301,8 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dBf-UU-ZwT" id="5BA-PT-prC">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EHH-tc-fTk">
-                                                    <rect key="frame" x="8" y="8" width="359" height="146"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EHH-tc-fTk">
+                                                    <rect key="frame" x="8" y="8" width="359" height="38"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -238,12 +320,12 @@
                     <navigationItem key="navigationItem" title="Add Assignment" id="gpu-ig-5os">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2e1-Mh-U7n">
                             <connections>
-                                <segue destination="vyq-ow-CqS" kind="unwind" unwindAction="cancelToPlayersViewController:" id="XDD-gS-hkk"/>
+                                <segue destination="vyq-ow-CqS" kind="unwind" unwindAction="cancelToAssignmentViewController:" id="KGR-zw-8oW"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="wMN-AF-OkM">
                             <connections>
-                                <segue destination="2zZ-je-OnB" kind="show" id="meu-or-MpV"/>
+                                <segue destination="vyq-ow-CqS" kind="unwind" unwindAction="saveAssignmentDetail:" id="HDk-3a-PSU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -257,13 +339,13 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XdZ-eb-D77" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="vyq-ow-CqS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1680.5" y="216.5"/>
+            <point key="canvasLocation" x="1230.5" y="192.5"/>
         </scene>
         <!--Classes-->
         <scene sceneID="2kZ-hW-nwc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YtF-Or-1k7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Classes" id="uFS-As-Xgm"/>
+                    <tabBarItem key="tabBarItem" title="Classes" image="folder" id="uFS-As-Xgm"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c2w-gR-pBh">
@@ -277,7 +359,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ke8-rp-tl8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="143" y="-591"/>
+            <point key="canvasLocation" x="210.5" y="-591.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XWc-ng-N44">
@@ -296,28 +378,33 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZg-8a-pJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1173.5" y="216.5"/>
+            <point key="canvasLocation" x="664.5" y="192.5"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="9Dm-Xb-wsD">
+        <!--Home-->
+        <scene sceneID="d2P-kg-kW7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vie-Wi-zoo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2zZ-je-OnB" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="350-h1-PgU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house" id="PUW-9K-uKc"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tSs-ez-hLG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6c0-Xs-Z0X">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="YBu-4c-Mar" kind="relationship" relationship="rootViewController" id="O6i-Rl-aIA"/>
+                        <segue destination="Pe4-pC-f8n" kind="relationship" relationship="rootViewController" id="NG6-R7-qyT"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YO6-NU-tY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166.5" y="-591.5"/>
+            <point key="canvasLocation" x="202.5" y="-1474.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="folder" width="26" height="26"/>
+        <image name="house" width="26" height="26"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lkf-hE-XH5"/>
+        <segue reference="HyH-Ou-cEx"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
 class AssignmentDetailTableController: UITableViewController {
+    
+    var assignment: Assignment!
 
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var dateTextField: UIDatePicker!
+    @IBOutlet weak var noteTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,7 +31,33 @@ class AssignmentDetailTableController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 0 {
+            nameTextField.becomeFirstResponder()
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "SaveAssignmentDetail" {
+            println("SaveAssignmentDetail segue triggered")
+            
+//              assignment = Assignment()
+//
+////            assignment = Assignment(entity: Assignment, insertIntoManagedObjectContext: assignment?)
+////            let newAssignment = NSEntityDescription.insertNewObjectForEntityForName("Assignment", inManagedObjectContext: nil) as Assignment
+//            
+//            let context = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
+//            
+//            let newAssignment = NSEntityDescription.insertNewObjectForEntityForName("Assignment", inManagedObjectContext: context!) as Assignment
+//            
+//            let dst = self.storyboard?.instantiateViewControllerWithIdentifier("AssignmentTableViewController")! as AssignmentTableViewController
+//            
+//            dst.assignmentList.append(newAssignment)
+        }
+    }
+    
+/*
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -93,5 +126,7 @@ class AssignmentDetailTableController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+*/
 
 }
