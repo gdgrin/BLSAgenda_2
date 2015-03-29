@@ -17,9 +17,9 @@ import Foundation
 
 class AssignmentTableViewController: UITableViewController {
 
-    var assignmentList = [Assignment]()
-    var index: Int = 1
-    
+    var assignmentList: [Assignment]!
+    var index: Int!
+    var noteIndex = 0
 
     
     @IBAction func cancelToAssignmentViewController(segue: UIStoryboardSegue) {
@@ -50,28 +50,15 @@ class AssignmentTableViewController: UITableViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        println("title int")
-        println(self.title)
-        
-        println("from assignment's view did load method")
-        println("index: ")
-        println(index)
-        for i in assignmentList {
-            println(i.name)
-        }
-  
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        println("ghetto save test: ")
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -107,6 +94,11 @@ class AssignmentTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        noteIndex = indexPath.row
+    }
+
     
     @IBAction func unwindSegue(sender: AnyObject) {
         if let navController = self.navigationController {
@@ -209,17 +201,50 @@ class AssignmentTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
+    
+    func fetchLog() {
+        let fetchRequest = NSFetchRequest(entityName: "Assignment")
+        
+        // Create a sort descriptor object that sorts on the "title"
+        // property of the Core Data object
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        
+        // Set the list of sort descriptors in the fetch request,
+        // so it includes the sort descriptor
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [Assignment] {
+            assignmentList = fetchResults
+        }
     }
-    */
+    
+    
+    // Override to support editing the table view.
+//    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+//        if editingStyle == .Delete {
+//            println("deleting at index:")
+//            println(indexPath.row)
+//            println(assignmentList)
+//            let logItemToDelete = assignmentList[indexPath.row]
+//            
+//            // Delete it from the managedObjectContext
+//            assignmentList.removeAtIndex(indexPath.row)
+//            // Refresh the table view to indicate that it's deleted
+//            // self.fetchLog()
+//           
+//            // Tell the table view to animate out that row
+//            println("deleting")
+//            // tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+//            // tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+//            println("Deleted")
+//        }
+//        else if editingStyle == .Insert {
+//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+//        }    
+//    }
+    
 
     /*
     // Override to support rearranging the table view.
@@ -239,13 +264,15 @@ class AssignmentTableViewController: UITableViewController {
     
     // MARK: - Navigation
 
-    /*
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
-        println("prepare for segue called")
+        if segue.identifier == "NoteSegue" {
+            let dst = segue.destinationViewController as NoteViewController
+            dst.labelText = assignmentList[noteIndex].text
+        }
     }
-    */
 
 }

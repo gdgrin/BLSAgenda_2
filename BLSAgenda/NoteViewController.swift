@@ -10,12 +10,14 @@ import UIKit
 
 class NoteViewController: UIViewController {
 
-    
+    var labelText: String!
     @IBOutlet weak var noteLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        noteLabel.text = "NoteTextField"
+        
+        noteLabel.text = labelText
+        
         // Do any additional setup after loading the view.
     }
 

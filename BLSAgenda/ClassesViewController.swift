@@ -37,6 +37,7 @@ class ClassesViewController: UIViewController {
     
     var first = true
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if first {
@@ -88,7 +89,7 @@ class ClassesViewController: UIViewController {
                 // downcast the sender to appropriate thing, find its index relative to the subject buttons
                 //                let dst = segue.destinationViewController as AssignmentTableViewController
                 
-                let dst = self.storyboard?.instantiateViewControllerWithIdentifier("AssignmentTableViewController")! as AssignmentTableViewController
+                let dst = segue.destinationViewController as AssignmentTableViewController
                 
                 // get the current sender's appropriate index
                 
@@ -116,8 +117,6 @@ class ClassesViewController: UIViewController {
         }
     }
     
-    func unwindSegueFromAssignmentTable(segue: UIStoryboardSegue) {
-        
-    }
+ 
 }
 
