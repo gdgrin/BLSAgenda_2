@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B027ADE11AC77C170097024C /* ButtonSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B027ADE01AC77C170097024C /* ButtonSubject.swift */; };
+		B027ADE31AC786430097024C /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B027ADE21AC786430097024C /* NoteViewController.swift */; };
 		B034B0A91AB72BFC001F779F /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034B0A81AB72BFC001F779F /* Assignment.swift */; };
 		B06CE6151AC04F0100DC7E2B /* AssignmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06CE6141AC04F0100DC7E2B /* AssignmentCell.swift */; };
 		B06CE6171AC05E3400DC7E2B /* AssignmentDetailTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06CE6161AC05E3400DC7E2B /* AssignmentDetailTableController.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B027ADE01AC77C170097024C /* ButtonSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSubject.swift; sourceTree = "<group>"; };
+		B027ADE21AC786430097024C /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		B034B0A81AB72BFC001F779F /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		B06CE6141AC04F0100DC7E2B /* AssignmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentCell.swift; sourceTree = "<group>"; };
 		B06CE6161AC05E3400DC7E2B /* AssignmentDetailTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentDetailTableController.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 				B0832DBF1AB1CA7D0030AB49 /* ClassesViewController.swift */,
 				B06CE6141AC04F0100DC7E2B /* AssignmentCell.swift */,
 				B06CE6161AC05E3400DC7E2B /* AssignmentDetailTableController.swift */,
+				B027ADE01AC77C170097024C /* ButtonSubject.swift */,
+				B027ADE21AC786430097024C /* NoteViewController.swift */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -237,7 +243,9 @@
 			files = (
 				B06CE6151AC04F0100DC7E2B /* AssignmentCell.swift in Sources */,
 				B0832DC01AB1CA7D0030AB49 /* ClassesViewController.swift in Sources */,
+				B027ADE11AC77C170097024C /* ButtonSubject.swift in Sources */,
 				B0832DBB1AB1CA7D0030AB49 /* AppDelegate.swift in Sources */,
+				B027ADE31AC786430097024C /* NoteViewController.swift in Sources */,
 				B07700081AB72620002A0649 /* AssignmentTableViewController.swift in Sources */,
 				B034B0A91AB72BFC001F779F /* Assignment.swift in Sources */,
 				B0832DBE1AB1CA7D0030AB49 /* BLSAgenda.xcdatamodeld in Sources */,

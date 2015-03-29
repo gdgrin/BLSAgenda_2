@@ -13,6 +13,7 @@
 
 import UIKit
 import CoreData
+import Foundation
 
 class AssignmentTableViewController: UITableViewController {
 

@@ -23,6 +23,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to BLS Agenda!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHr-tx-6dh">
+                                <rect key="frame" x="53" y="180" width="269" height="123"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -67,18 +73,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7r-PK-8aQ">
-                                <rect key="frame" x="59" y="186" width="53" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Subj 1">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue1" id="Lk9-MN-gNi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsJ-1L-EdZ">
-                                <rect key="frame" x="161" y="186" width="53" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsJ-1L-EdZ" customClass="ButtonSubject" customModule="BLSAgenda" customModuleProvider="target">
+                                <rect key="frame" x="142" y="175" width="80" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Subj 2">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -87,8 +83,8 @@
                                     <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue2" id="6Wq-Xg-oq0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDU-uU-M1x">
-                                <rect key="frame" x="263" y="186" width="53" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDU-uU-M1x" customClass="ButtonSubject" customModule="BLSAgenda" customModuleProvider="target">
+                                <rect key="frame" x="249" y="175" width="80" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Subj 3">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -97,8 +93,8 @@
                                     <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue3" id="eJS-IK-pIL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpO-IM-AY0">
-                                <rect key="frame" x="59" y="268" width="53" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpO-IM-AY0" customClass="ButtonSubject" customModule="BLSAgenda" customModuleProvider="target">
+                                <rect key="frame" x="35" y="267" width="80" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Subj 4">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -107,8 +103,8 @@
                                     <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue4" id="7zX-Ce-OEL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfr-YN-xvB">
-                                <rect key="frame" x="161" y="268" width="53" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfr-YN-xvB" customClass="ButtonSubject" customModule="BLSAgenda" customModuleProvider="target">
+                                <rect key="frame" x="142" y="267" width="80" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Subj 5">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -117,8 +113,8 @@
                                     <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue5" id="jaH-ol-ybD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IO-3H-AoS">
-                                <rect key="frame" x="59" y="346" width="53" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IO-3H-AoS" customClass="ButtonSubject" customModule="BLSAgenda" customModuleProvider="target">
+                                <rect key="frame" x="35" y="355" width="80" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Subj 7">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -127,8 +123,8 @@
                                     <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue7" id="UN5-HG-q4R"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvz-ee-0QK">
-                                <rect key="frame" x="161" y="346" width="53" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvz-ee-0QK" customClass="ButtonSubject" customModule="BLSAgenda" customModuleProvider="target">
+                                <rect key="frame" x="142" y="355" width="80" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Subj 8">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -137,8 +133,8 @@
                                     <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue8" id="AAj-Ux-wL9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIK-rR-yMD">
-                                <rect key="frame" x="263" y="346" width="53" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIK-rR-yMD" customClass="ButtonSubject" customModule="BLSAgenda" customModuleProvider="target">
+                                <rect key="frame" x="249" y="355" width="80" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Subj 9">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -154,14 +150,24 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAH-9a-KN6">
-                                <rect key="frame" x="263" y="268" width="53" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAH-9a-KN6" customClass="ButtonSubject" customModule="BLSAgenda" customModuleProvider="target">
+                                <rect key="frame" x="249" y="267" width="80" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Subj 6">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue6" id="FoB-qh-o7q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7r-PK-8aQ" customClass="ButtonSubject" customModule="BLSAgenda" customModuleProvider="target">
+                                <rect key="frame" x="35" y="175" width="80" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Subj 1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue1" id="Lk9-MN-gNi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -218,6 +224,7 @@
                                 <connections>
                                     <outlet property="dueDateLabel" destination="QWs-XZ-IUe" id="Zw9-xT-vGj"/>
                                     <outlet property="nameLabel" destination="vcI-Mn-wCD" id="DeA-e6-ber"/>
+                                    <segue destination="yWx-OF-v6k" kind="show" trigger="accessoryAction" id="oJd-pj-dp8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -249,6 +256,37 @@
                 <exit id="243-06-Hr5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1230.5" y="-591.5"/>
+        </scene>
+        <!--Note View Controller-->
+        <scene sceneID="XzO-C8-2UQ">
+            <objects>
+                <viewController id="85L-YP-x0O" customClass="NoteViewController" customModule="BLSAgenda" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FnT-Ut-0QB"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Z3-ci-H2q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eSX-nK-eNz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdo-K2-Izr">
+                                <rect key="frame" x="86" y="107" width="233" height="231"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mdl-Ox-02s"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="noteLabel" destination="Pdo-K2-Izr" id="rks-oy-cCW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ivH-ci-i1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2186.5" y="-829.5"/>
         </scene>
         <!--Add Assignment-->
         <scene sceneID="bTD-oa-8o9">
@@ -302,7 +340,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EHH-tc-fTk">
-                                                    <rect key="frame" x="8" y="8" width="359" height="38"/>
+                                                    <rect key="frame" x="8" y="8" width="359" height="146"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -398,6 +436,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YO6-NU-tY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="202.5" y="-1474.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aWt-aT-Cas">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yWx-OF-v6k" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p7b-PA-tZ8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="85L-YP-x0O" kind="relationship" relationship="rootViewController" id="9DM-ZP-mve"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GLY-X3-fDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1721.5" y="-829.5"/>
         </scene>
     </scenes>
     <resources>
