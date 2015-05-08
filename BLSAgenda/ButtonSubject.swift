@@ -15,7 +15,6 @@ class ButtonSubject: UIButton {
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
         // Drawing code
-        self.layer.backgroundColor = UIColor.greenColor().CGColor
         self.layer.cornerRadius = 5
         self.layer.borderWidth = 2
         self.layer.borderColor = UIColor.blackColor().CGColor

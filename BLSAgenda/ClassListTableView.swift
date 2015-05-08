@@ -1,21 +1,48 @@
 //
-//  AssignmentDetailTableController.swift
+//  ClassListTableView.swift
 //  BLSAgenda
 //
-//  Created by Gene Grinberg on 3/23/15.
+//  Created by Gene Grinberg on 3/29/15.
 //  Copyright (c) 2015 Gene Grinberg. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-class AssignmentDetailTableController: UITableViewController {
-    
-    var assignment: Assignment!
+class ClassListTableView: UITableViewController {
 
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var dateTextField: UIDatePicker!
-    @IBOutlet weak var noteTextField: UITextField!
+    var classList: [Class]!
+    var index: Int!
+
+    
+    @IBAction func cancelToListClass(segue: UIStoryboardSegue){
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
+    @IBAction func saveClassDetail(segue: UIStoryboardSegue){
+        
+//        let addClassDetailTable = segue.sourceViewController as AddClassDetailTable
+//        
+//        let appDelegate = UIApplication.sharedApplication().delegate! as AppDelegate
+//        let context = appDelegate.managedObjectContext!
+//        let newClass: Class = NSEntityDescription.insertNewObjectForEntityForName("Class", inManagedObjectContext: context) as Class
+//        newClass.name = addClassDetailTable.classNameTextField.text
+//        newClass.color = addClassDetailTable.colorLabel.text!
+//        
+//        //add the new assignment to the assignmentList array
+//        classList.append(newClass)
+//        
+//        //update the tableView
+//        let indexPath = NSIndexPath(forRow: classList.count-1, inSection: 0)
+//        tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+//        
+//        //hide the detail view controller
+//        dismissViewControllerAnimated(true, completion: nil)
+//        
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,32 +58,45 @@ class AssignmentDetailTableController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        if indexPath.section == 0 {
-//            nameTextField.becomeFirstResponder()
-//        }
-//    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-    }
-    
-/*
+
+
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return classList.count
+    }
+    
+    @IBAction func addClassToList(segue: UIStoryboardSegue) {
+//        if let navController = self.navigationController {
+//            let root = navController.viewControllers.first as ClassesViewController
+//            root.allAssignments[index] = assignmentList
+//            
+//            navController.popViewControllerAnimated(true)
+//        }
     }
 
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("ClassCell", forIndexPath: indexPath) as ClassCell
+        
+        let classes = classList[indexPath.row] as Class
+        cell.classNameLabel.text = classes.name
+        cell.colorNameLabel.text = classes.color //
+        
+        return cell
+    }
+
+    @IBAction func classUnwindSegue(sender: AnyObject) {
+        
+    }
+    
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
@@ -111,7 +151,5 @@ class AssignmentDetailTableController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-*/
 
 }

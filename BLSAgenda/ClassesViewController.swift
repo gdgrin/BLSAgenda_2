@@ -8,8 +8,12 @@
 
 import UIKit
 import CoreData
+import Foundation
+
 
 class ClassesViewController: UIViewController {
+    
+    var classList = [Class]()
 
     @IBOutlet weak var sb1: UIButton!
     @IBOutlet weak var sb2: UIButton!
@@ -23,34 +27,46 @@ class ClassesViewController: UIViewController {
     var subjectButtons = [UIButton]()
     
     // essentially a big matrix of the assignemnts
-    var sb1Assignments = [Assignment]()
-    var sb2Assignments = [Assignment]()
-    var sb3Assignments = [Assignment]()
-    var sb4Assignments = [Assignment]()
-    var sb5Assignments = [Assignment]()
-    var sb6Assignments = [Assignment]()
-    var sb7Assignments = [Assignment]()
-    var sb8Assignments = [Assignment]()
-    var sb9Assignments = [Assignment]()
+//    var sb1Assignments = [Assignment]()
+//    var sb2Assignments = [Assignment]()
+//    var sb3Assignments = [Assignment]()
+//    var sb4Assignments = [Assignment]()
+//    var sb5Assignments = [Assignment]()
+//    var sb6Assignments = [Assignment]()
+//    var sb7Assignments = [Assignment]()
+//    var sb8Assignments = [Assignment]()
+//    var sb9Assignments = [Assignment]()
     
-    var allAssignments = [[Assignment]]()
+    var allAssignments: [[Assignment]]!
     
-    var first = true
-    
+    var first = true;
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if first {
-            subjectButtons.append(sb1)
-            subjectButtons.append(sb2)
-            subjectButtons.append(sb3)
-            subjectButtons.append(sb4)
-            subjectButtons.append(sb5)
-            subjectButtons.append(sb6)
-            subjectButtons.append(sb7)
-            subjectButtons.append(sb8)
-            subjectButtons.append(sb9)
+        println("in class view's view did load")
         
+        subjectButtons.append(sb1)
+        subjectButtons.append(sb2)
+        subjectButtons.append(sb3)
+        subjectButtons.append(sb4)
+        subjectButtons.append(sb5)
+        subjectButtons.append(sb6)
+        subjectButtons.append(sb7)
+        subjectButtons.append(sb8)
+        subjectButtons.append(sb9)
+        
+        if first {
+            allAssignments = [[Assignment]]()
+            var sb1Assignments = [Assignment]()
+            var sb2Assignments = [Assignment]()
+            var sb3Assignments = [Assignment]()
+            var sb4Assignments = [Assignment]()
+            var sb5Assignments = [Assignment]()
+            var sb6Assignments = [Assignment]()
+            var sb7Assignments = [Assignment]()
+            var sb8Assignments = [Assignment]()
+            var sb9Assignments = [Assignment]()
+            
             allAssignments.append(sb1Assignments)
             allAssignments.append(sb2Assignments)
             allAssignments.append(sb3Assignments)
@@ -60,17 +76,16 @@ class ClassesViewController: UIViewController {
             allAssignments.append(sb7Assignments)
             allAssignments.append(sb8Assignments)
             allAssignments.append(sb9Assignments)
-            
             first = false
         }
         
-        println("from clas's view did load")
-        for i in allAssignments {
-            println("this subject")
-            for j in i {
-                println(j.name)
-            }
+        for i in subjectButtons {
+//            i.hidden = true
         }
+        
+        // load stored stuff from core data
+        loadAssignments()
+        loadClassButtons()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -99,17 +114,11 @@ class ClassesViewController: UIViewController {
                     
                     if (subjectButtons[i] == senderButton) {
                         // found match
-                        println("found match and assigning")
                         let matchedAssignments = allAssignments[i]
                         dst.assignmentList = matchedAssignments
                         dst.index = i
                         
-                        println("going from class's segue")
-                        for ma in matchedAssignments {
-                            println(ma)
-                        }
-                        println(i)
-                        dst.title = "7"
+//                        dst.title = "" put class name
                         // assign assignment view controller's index and assignment array to appropriate values
                     }
                 }
@@ -117,6 +126,89 @@ class ClassesViewController: UIViewController {
         }
     }
     
+    func loadAssignments() {
+        let appDelegate =
+        UIApplication.sharedApplication().delegate as AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext!
+        
+        let fetchRequest = NSFetchRequest(entityName:"Assignment")
+        
+        var error: NSError?
+        
+        let fetchedResults =
+        managedContext.executeFetchRequest(fetchRequest,
+            error: &error) as [Assignment]?
+        
+//        if let results = fetchedResults {
+//            assignmentList = results
+//            
+//        }
+        
+        for i in fetchedResults! {
+            allAssignments[i.category].removeAll(keepCapacity: false)
+            allAssignments[i.category].append(i)
+        }
+        
+        if let tmp = fetchedResults {
+            println("assignment fetch successful")
+        } else {
+            println("Could not fetch \(error), \(error!.userInfo)")
+        }
+
+    }
+    
+    func loadClassButtons() {
+        // retrieve any existing from core data and repopulate the classList
+    }
+    
+    @IBAction func updateCoreAssignments(segue: UIStoryboardSegue) {
+        println("in the update core method")
+        let appDelegate =
+        UIApplication.sharedApplication().delegate as AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext!
+        
+//        println(allAssignments)
+//        println(allAssignments.count)
+//        for i in allAssignments {
+//            println(i)
+//        }
+        
+        for iter1 in allAssignments {
+            for iter2 in iter1 {
+                let entity = NSEntityDescription.entityForName("Assignment", inManagedObjectContext: managedContext)
+                let assignment = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+                let currentIterationValue = iter2
+                assignment.setValue(iter2.name, forKey: "name")
+                assignment.setValue(iter2.dueDate, forKey: "dueDate")
+                assignment.setValue(iter2.text, forKey: "text")
+                assignment.setValue(iter2.category, forKey: "category")
+                
+                println("save function triggered for \(iter2.name)")
+                
+                var error: NSError?
+                if !managedContext.save(&error) {
+                    println("Could not save \(error), \(error?.userInfo)")
+                }
+            }
+        }
+//        let entity =  NSEntityDescription.entityForName("Assignment",
+//            inManagedObjectContext:
+//            managedContext)
+//        
+//        let assignment = NSManagedObject(entity: entity!,
+//            insertIntoManagedObjectContext:managedContext)
+//        
+//        assignment.setValue(name, forKey: "name")
+//        
+//        
+//        var error: NSError?
+//        if !managedContext.save(&error) {
+//            println("Could not save \(error), \(error?.userInfo)")
+//        }
+//        assignmentList.append(assignment)
+    }
  
 }
 

@@ -27,6 +27,7 @@ class AssignmentTableViewController: UITableViewController {
     }
     
     @IBAction func saveAssignmentDetail(segue: UIStoryboardSegue) {
+       
         let assignmentDetailTableController = segue.sourceViewController as AssignmentDetailTableController
         
 //        let newAssignment = Assignment()
@@ -36,15 +37,20 @@ class AssignmentTableViewController: UITableViewController {
         newAssignment.name = assignmentDetailTableController.nameTextField.text
         newAssignment.dueDate = assignmentDetailTableController.dateTextField.date
         newAssignment.text = assignmentDetailTableController.noteTextField.text
+        newAssignment.category = index
         
         //add the new assignment to the assignmentList array
-        println("new assignment: ")
-        println(newAssignment.description)
         assignmentList.append(newAssignment)
+        
+        println("in save assignemnt detail function")
+        println(newAssignment.name)
         
         //update the tableView
         let indexPath = NSIndexPath(forRow: assignmentList.count-1, inSection: 0)
         tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        
+        let rootvc = self.navigationController?.viewControllers.first as ClassesViewController
+        rootvc.allAssignments[index] = assignmentList
         
         //hide the detail view controller
         dismissViewControllerAnimated(true, completion: nil)
@@ -104,93 +110,11 @@ class AssignmentTableViewController: UITableViewController {
         if let navController = self.navigationController {
             let root = navController.viewControllers.first as ClassesViewController
             root.allAssignments[index] = assignmentList
-            for i in assignmentList {
-                println(i.name)
-            }
-            println("assignment from root:")
-            for i in root.allAssignments[index] {
-                println(i.name)
-            }
-            
-            println("form the unwind segue method")
-            for i in root.allAssignments {
-                println("this subject")
-                for j in i {
-                    println(j.name)
-                }
-            }
-            
-//            func saveName(name: String) {
-//                let appDelegate =
-//                UIApplication.sharedApplication().delegate as AppDelegate
-//                
-//                let managedContext = appDelegate.managedObjectContext!
-//                
-//                let entity =  NSEntityDescription.entityForName("Assignment",
-//                    inManagedObjectContext:
-//                    managedContext)
-//                
-//                let assignment = NSManagedObject(entity: entity!,
-//                    insertIntoManagedObjectContext:managedContext)
-//                
-//                assignment.setValue(name, forKey: "name")
-//
-//                
-//                var error: NSError?
-//                if !managedContext.save(&error) {
-//                    println("Could not save \(error), \(error?.userInfo)")
-//                }
-//                assignmentList.append(assignment)
-//            }
-//
-//            override func viewWillAppear(animated: Bool) {
-//                super.viewWillAppear(animated)
-//                
-//                let appDelegate =
-//                UIApplication.sharedApplication().delegate as AppDelegate
-//                
-//                let managedContext = appDelegate.managedObjectContext!
-//                
-//                let fetchRequest = NSFetchRequest(entityName:"Assignment")
-//                
-//                var error: NSError?
-//                
-//                let fetchedResults =
-//                managedContext.executeFetchRequest(fetchRequest,
-//                    error: &error) as [NSManagedObject]?
-//                
-//                if let results = fetchedResults {
-//                    assignments = results
-//                }
-//                else {
-//                    println("Could not fetch \(error), \(error!.userInfo)")
-//                }
-//            }
-            
-            
             
             navController.popViewControllerAnimated(true)
-//            let dst = self.storyboard?.instantiateViewControllerWithIdentifier("ClassesViewController") as ClassesViewController
-//            dst.allAssignments[index] = assignmentList
         }
     }
     
-//    func ghettoSave(index: Int, mod: Bool) -> Int {
-//
-//                if index.count > 0 {
-//            struct Holder {
-//                static var tmpIndex = index[0]
-//            }
-//            return Holder.tmpIndex
-//        } else {
-//            return 0
-//        }
-//
-//        struct Holder {
-//            var index: Int = 0
-//        }
-//    }
-
 
     
     /*
@@ -270,6 +194,8 @@ class AssignmentTableViewController: UITableViewController {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
         if segue.identifier == "NoteSegue" {
+            println("Note segue triggered")
+            println(assignmentList[noteIndex].text)
             let dst = segue.destinationViewController as NoteViewController
             dst.labelText = assignmentList[noteIndex].text
         }

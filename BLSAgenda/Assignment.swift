@@ -13,7 +13,7 @@ class Assignment: NSManagedObject {
 
     @NSManaged var name: String
     @NSManaged var dueDate: NSDate
-    @NSManaged var category: String
     @NSManaged var text: String
+    @NSManaged var category: Int
 
 }

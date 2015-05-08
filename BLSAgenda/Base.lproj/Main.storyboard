@@ -19,7 +19,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BLS Agenda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFg-cF-0RQ">
                                 <rect key="frame" x="-1" y="64" width="376" height="65"/>
                                 <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -75,8 +75,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsJ-1L-EdZ" customClass="ButtonSubject" customModule="BLSAgenda" customModuleProvider="target">
                                 <rect key="frame" x="142" y="175" width="80" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Subj 2">
+                                <state key="normal" title="English">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -85,8 +86,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDU-uU-M1x" customClass="ButtonSubject" customModule="BLSAgenda" customModuleProvider="target">
                                 <rect key="frame" x="249" y="175" width="80" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Subj 3">
+                                <state key="normal" title="Physics">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -95,8 +97,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpO-IM-AY0" customClass="ButtonSubject" customModule="BLSAgenda" customModuleProvider="target">
                                 <rect key="frame" x="35" y="267" width="80" height="60"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Subj 4">
+                                <state key="normal" title="History">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -105,8 +108,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfr-YN-xvB" customClass="ButtonSubject" customModule="BLSAgenda" customModuleProvider="target">
                                 <rect key="frame" x="142" y="267" width="80" height="60"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Subj 5">
+                                <state key="normal" title="Latin">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -115,28 +119,20 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IO-3H-AoS" customClass="ButtonSubject" customModule="BLSAgenda" customModuleProvider="target">
                                 <rect key="frame" x="35" y="355" width="80" height="60"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Subj 7">
+                                <state key="normal" title="Chemistry">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue7" id="UN5-HG-q4R"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvz-ee-0QK" customClass="ButtonSubject" customModule="BLSAgenda" customModuleProvider="target">
-                                <rect key="frame" x="142" y="355" width="80" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Subj 8">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue8" id="AAj-Ux-wL9"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIK-rR-yMD" customClass="ButtonSubject" customModule="BLSAgenda" customModuleProvider="target">
                                 <rect key="frame" x="249" y="355" width="80" height="60"/>
+                                <color key="backgroundColor" red="0.80000001192092896" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Subj 9">
+                                <state key="normal" title="Music">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -146,14 +142,15 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BLS Agenda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywr-hY-704">
                                 <rect key="frame" x="0.0" y="64" width="376" height="65"/>
                                 <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAH-9a-KN6" customClass="ButtonSubject" customModule="BLSAgenda" customModuleProvider="target">
                                 <rect key="frame" x="249" y="267" width="80" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Subj 6">
+                                <state key="normal" title="Spanish">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -162,12 +159,24 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7r-PK-8aQ" customClass="ButtonSubject" customModule="BLSAgenda" customModuleProvider="target">
                                 <rect key="frame" x="35" y="175" width="80" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Subj 1">
+                                <state key="normal" title="Math">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue1" id="Lk9-MN-gNi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvz-ee-0QK" customClass="ButtonSubject" customModule="BLSAgenda" customModuleProvider="target">
+                                <rect key="frame" x="142" y="355" width="80" height="60"/>
+                                <color key="backgroundColor" red="0.80000001192092896" green="0.40000000596046448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Art">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YBu-4c-Mar" kind="show" identifier="AssignmentSegue8" id="AAj-Ux-wL9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -177,7 +186,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="78q-TB-lm1"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="X2d-8k-Sex">
                             <connections>
-                                <segue destination="HAi-hA-JRf" kind="show" id="Zbz-1t-H2d"/>
+                                <segue destination="ttZ-rv-3d0" kind="show" identifier="ShowClassList" id="o9f-re-qSj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -201,13 +210,13 @@
         <!--Class List-->
         <scene sceneID="mqg-N0-t4W">
             <objects>
-                <tableViewController id="ttZ-rv-3d0" sceneMemberID="viewController">
+                <tableViewController id="ttZ-rv-3d0" customClass="ClassListTableView" customModule="BLSAgenda" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DGm-TV-Ufh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="kD6-SV-Rfx" detailTextLabel="GIi-ya-7IB" style="IBUITableViewCellStyleSubtitle" id="meS-AF-xdJ">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="kD6-SV-Rfx" detailTextLabel="GIi-ya-7IB" rowHeight="55" style="IBUITableViewCellStyleSubtitle" id="meS-AF-xdJ" customClass="ClassCell" customModule="BLSAgenda" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="meS-AF-xdJ" id="wgQ-in-azt">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -226,6 +235,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="classNameLabel" destination="kD6-SV-Rfx" id="kl3-We-LwS"/>
+                                    <outlet property="colorNameLabel" destination="GIi-ya-7IB" id="Adp-dN-zjP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -234,6 +247,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Class List" id="FDF-Xv-Zgy">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="7QZ-zi-UwP"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="MjO-Fc-zxu">
                             <connections>
                                 <segue destination="NZg-N3-XA9" kind="presentation" id="rJK-CA-AaK"/>
@@ -244,12 +258,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDR-fm-z77" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871.5" y="233.5"/>
+            <point key="canvasLocation" x="664.5" y="193.5"/>
         </scene>
         <!--Add Class-->
         <scene sceneID="Dn0-Gf-OBR">
             <objects>
-                <tableViewController id="mwv-zJ-b9y" sceneMemberID="viewController">
+                <tableViewController id="mwv-zJ-b9y" customClass="AddClassDetailTable" customModule="BLSAgenda" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="5fr-rU-fpa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -257,7 +271,7 @@
                         <sections>
                             <tableViewSection headerTitle="Class Name" id="bpA-Am-po2">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="tKU-1w-I8B">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="44" id="tKU-1w-I8B">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tKU-1w-I8B" id="X5N-0z-IYg">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -272,18 +286,30 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Color" id="cxE-c4-SJc">
+                            <tableViewSection headerTitle="" id="cxE-c4-SJc">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="127" id="u5r-fy-Efb">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="vLM-2k-UYA" detailTextLabel="eZD-96-ZGz" rowHeight="39" style="IBUITableViewCellStyleValue1" id="u5r-fy-Efb">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u5r-fy-Efb" id="KWZ-Os-BbF">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iWf-Cl-7GX">
-                                                    <rect key="frame" x="0.0" y="-18" width="375" height="162"/>
-                                                </pickerView>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Color" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vLM-2k-UYA">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eZD-96-ZGz">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="cSM-gI-BIu" kind="show" identifier="PickColor" id="KTV-Bf-HoC"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -294,14 +320,66 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Class" id="eaT-WN-MMd">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NoC-pE-bsG"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="IFB-DS-3U3"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NoC-pE-bsG">
+                            <connections>
+                                <segue destination="9wd-kX-VUo" kind="unwind" unwindAction="cancelToListClass:" id="HSm-Jz-JMr"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="IFB-DS-3U3">
+                            <connections>
+                                <segue destination="9wd-kX-VUo" kind="unwind" unwindAction="saveClassDetail:" id="mgC-3U-HaS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="classNameTextField" destination="lXE-Er-bbo" id="iBd-s2-4FO"/>
+                        <outlet property="colorLabel" destination="eZD-96-ZGz" id="M9a-xT-rYm"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omD-Hp-PPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="9wd-kX-VUo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="871.5" y="1003.5"/>
+        </scene>
+        <!--Color Picker Table View-->
+        <scene sceneID="cfZ-F7-yoJ">
+            <objects>
+                <tableViewController id="cSM-gI-BIu" customClass="ColorPickerTableView" customModule="BLSAgenda" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="MV1-9H-qdv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ColorCell" textLabel="Hqa-4c-Izv" style="IBUITableViewCellStyleDefault" id="com-ao-lnU">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="com-ao-lnU" id="ahM-RW-SRu">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hqa-4c-Izv">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="m57-Qb-QIU" kind="unwind" identifier="SaveSelectedColor" unwindAction="selectedColor:" id="Dfn-cD-WTB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cSM-gI-BIu" id="wPf-4V-lei"/>
+                            <outlet property="delegate" destination="cSM-gI-BIu" id="bOy-Ds-9tV"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zdI-ld-T2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="m57-Qb-QIU" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1374.5" y="1003.5"/>
         </scene>
         <!--Assignment Table-->
         <scene sceneID="BAr-Ez-K1l">
@@ -312,7 +390,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="AssignmentCell" textLabel="vcI-Mn-wCD" detailTextLabel="QWs-XZ-IUe" style="IBUITableViewCellStyleSubtitle" id="hMW-Jg-SQl" customClass="AssignmentCell" customModule="BLSAgenda" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="AssignmentCell" textLabel="vcI-Mn-wCD" detailTextLabel="QWs-XZ-IUe" rowHeight="55" style="IBUITableViewCellStyleSubtitle" id="hMW-Jg-SQl" customClass="AssignmentCell" customModule="BLSAgenda" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hMW-Jg-SQl" id="JYl-5z-m1j">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -348,6 +426,7 @@
                         <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="hPb-68-lyp">
                             <connections>
                                 <action selector="unwindSegue:" destination="YBu-4c-Mar" id="MNy-sE-lp4"/>
+                                <segue destination="243-06-Hr5" kind="unwind" unwindAction="updateCoreAssignments:" id="TII-NI-sKy"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7h9-Ar-SA0">
@@ -358,9 +437,6 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <segue destination="243-06-Hr5" kind="unwind" identifier="unwindFromAssignmentTableSegue" unwindAction="unwindFromAssignmentTable:" id="tHk-vf-kqP"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="36C-t4-x4n" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="243-06-Hr5" userLabel="Exit" sceneMemberID="exit"/>
@@ -379,8 +455,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBw-H8-A4n">
-                                <rect key="frame" x="166" y="173" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBw-H8-A4n">
+                                <rect key="frame" x="16" y="84" width="343" height="308"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -548,24 +624,6 @@
             <point key="canvasLocation" x="202.5" y="-1474.5"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="gk4-GR-itc">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HAi-hA-JRf" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PZX-SZ-cez">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ttZ-rv-3d0" kind="relationship" relationship="rootViewController" id="OTk-f4-FrB"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6bZ-0k-mXR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="424.5" y="233.5"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="ans-la-5Ma">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NZg-N3-XA9" sceneMemberID="viewController">
@@ -589,6 +647,6 @@
         <image name="house" width="26" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HyH-Ou-cEx"/>
+        <segue reference="AAj-Ux-wL9"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		B027ADE11AC77C170097024C /* ButtonSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B027ADE01AC77C170097024C /* ButtonSubject.swift */; };
 		B027ADE31AC786430097024C /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B027ADE21AC786430097024C /* NoteViewController.swift */; };
+		B027ADE51AC889CF0097024C /* AddClassDetailTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B027ADE41AC889CF0097024C /* AddClassDetailTable.swift */; };
+		B027ADE71AC88A7B0097024C /* ClassListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B027ADE61AC88A7B0097024C /* ClassListTableView.swift */; };
+		B027ADE91AC88D8C0097024C /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = B027ADE81AC88D8C0097024C /* Class.swift */; };
+		B027ADED1AC8E2AB0097024C /* ColorPickerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B027ADEC1AC8E2AB0097024C /* ColorPickerTableView.swift */; };
+		B027ADEF1AC8ED880097024C /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B027ADEE1AC8ED880097024C /* ClassCell.swift */; };
 		B034B0A91AB72BFC001F779F /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034B0A81AB72BFC001F779F /* Assignment.swift */; };
 		B06CE6151AC04F0100DC7E2B /* AssignmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06CE6141AC04F0100DC7E2B /* AssignmentCell.swift */; };
 		B06CE6171AC05E3400DC7E2B /* AssignmentDetailTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06CE6161AC05E3400DC7E2B /* AssignmentDetailTableController.swift */; };
@@ -35,6 +40,11 @@
 /* Begin PBXFileReference section */
 		B027ADE01AC77C170097024C /* ButtonSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSubject.swift; sourceTree = "<group>"; };
 		B027ADE21AC786430097024C /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		B027ADE41AC889CF0097024C /* AddClassDetailTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassDetailTable.swift; sourceTree = "<group>"; };
+		B027ADE61AC88A7B0097024C /* ClassListTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassListTableView.swift; sourceTree = "<group>"; };
+		B027ADE81AC88D8C0097024C /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
+		B027ADEC1AC8E2AB0097024C /* ColorPickerTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerTableView.swift; sourceTree = "<group>"; };
+		B027ADEE1AC8ED880097024C /* ClassCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
 		B034B0A81AB72BFC001F779F /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		B06CE6141AC04F0100DC7E2B /* AssignmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentCell.swift; sourceTree = "<group>"; };
 		B06CE6161AC05E3400DC7E2B /* AssignmentDetailTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentDetailTableController.swift; sourceTree = "<group>"; };
@@ -70,16 +80,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B07700091AB7262B002A0649 /* src */ = {
+		B027ADEA1AC890870097024C /* Assignment Files */ = {
 			isa = PBXGroup;
 			children = (
 				B034B0A81AB72BFC001F779F /* Assignment.swift */,
 				B07700071AB72620002A0649 /* AssignmentTableViewController.swift */,
-				B0832DBF1AB1CA7D0030AB49 /* ClassesViewController.swift */,
-				B06CE6141AC04F0100DC7E2B /* AssignmentCell.swift */,
 				B06CE6161AC05E3400DC7E2B /* AssignmentDetailTableController.swift */,
-				B027ADE01AC77C170097024C /* ButtonSubject.swift */,
+				B06CE6141AC04F0100DC7E2B /* AssignmentCell.swift */,
 				B027ADE21AC786430097024C /* NoteViewController.swift */,
+			);
+			name = "Assignment Files";
+			sourceTree = "<group>";
+		};
+		B027ADEB1AC890AC0097024C /* Class Files */ = {
+			isa = PBXGroup;
+			children = (
+				B027ADE81AC88D8C0097024C /* Class.swift */,
+				B027ADE61AC88A7B0097024C /* ClassListTableView.swift */,
+				B027ADE41AC889CF0097024C /* AddClassDetailTable.swift */,
+				B027ADEC1AC8E2AB0097024C /* ColorPickerTableView.swift */,
+				B027ADEE1AC8ED880097024C /* ClassCell.swift */,
+			);
+			name = "Class Files";
+			sourceTree = "<group>";
+		};
+		B07700091AB7262B002A0649 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B0832DBF1AB1CA7D0030AB49 /* ClassesViewController.swift */,
+				B027ADE01AC77C170097024C /* ButtonSubject.swift */,
+				B027ADEA1AC890870097024C /* Assignment Files */,
+				B027ADEB1AC890AC0097024C /* Class Files */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -241,14 +272,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B027ADED1AC8E2AB0097024C /* ColorPickerTableView.swift in Sources */,
+				B027ADE91AC88D8C0097024C /* Class.swift in Sources */,
 				B06CE6151AC04F0100DC7E2B /* AssignmentCell.swift in Sources */,
 				B0832DC01AB1CA7D0030AB49 /* ClassesViewController.swift in Sources */,
 				B027ADE11AC77C170097024C /* ButtonSubject.swift in Sources */,
 				B0832DBB1AB1CA7D0030AB49 /* AppDelegate.swift in Sources */,
 				B027ADE31AC786430097024C /* NoteViewController.swift in Sources */,
 				B07700081AB72620002A0649 /* AssignmentTableViewController.swift in Sources */,
+				B027ADEF1AC8ED880097024C /* ClassCell.swift in Sources */,
 				B034B0A91AB72BFC001F779F /* Assignment.swift in Sources */,
 				B0832DBE1AB1CA7D0030AB49 /* BLSAgenda.xcdatamodeld in Sources */,
+				B027ADE51AC889CF0097024C /* AddClassDetailTable.swift in Sources */,
+				B027ADE71AC88A7B0097024C /* ClassListTableView.swift in Sources */,
 				B06CE6171AC05E3400DC7E2B /* AssignmentDetailTableController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
